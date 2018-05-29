@@ -4,9 +4,9 @@
 <title>myplayer</title>
 <meta charset="utf-8">
 <meta name="author" content="codechizi">
-<link rel="icon" type="icon/x-image" href="myplayer.png">
+<link rel="icon" type="icon/x-image" href="myplayerlogo.png">
 <link rel="stylesheet" type="text/css" href="mplayer.css">
-<script src="mpayer.js"></script>
+<script src="mplayer.js"></script>
 </head>
 <body>
 <!--video container-->
