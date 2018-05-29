@@ -9,5 +9,23 @@
 <script src="mpayer.js"></script>
 </head>
 <body>
+<!--video container-->
+<div class="videocontainer" id="videocontainer">
+<!--contains the videoplayer-->
+<div class="videoplayer" id="videoplayer">
+<video class="myvideo" id="myvideo" autoplay src="">
+</video>
+<ul class="progresslist" id="progresslist">
+<div class="progress" id="progress">
+<div class="progressbar" id="progressbar">
+</div>
+</div>
+</ul>
+<ul class="controllist" id="controllist">
+</ul>
+</div>
+<div class="playlist" id="playlist">
+</div>
+</div>
 </body>
 </html>
