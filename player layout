@@ -1,28 +1,17 @@
 <!doctype html>
 <html>
 <head>
-<title>myplayer</title>
+<title>mplayer</title>
 <meta charset="utf-8">
 <meta name="author" content="codechizi">
-<link rel="icon" type="icon/x-image" href="myplayerlogo.png">
+<meta name="description" content="a html video player">
+<link rel="icon" type="icon/x-image" href="mplayerlogo.png">
 <link rel="stylesheet" type="text/css" href="mplayer.css">
 <script src="mplayer.js"></script>
 </head>
 <body>
-<!--video container-->
+<div class="player" id="player">
 <div class="videocontainer" id="videocontainer">
-<!--contains the videoplayer-->
-<div class="videoplayer" id="videoplayer">
-<video class="myvideo" id="myvideo" autoplay src="">
-</video>
-<ul class="progresslist" id="progresslist">
-<div class="progress" id="progress">
-<div class="progressbar" id="progressbar">
-</div>
-</div>
-</ul>
-<ul class="controllist" id="controllist">
-</ul>
 </div>
 <div class="playlist" id="playlist">
 </div>
