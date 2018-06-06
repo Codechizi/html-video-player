@@ -13,13 +13,21 @@
 <body>
 <div class="player">
 <div class="videocontainer">
+<div class="settings">
+</div>
+<!--end of settings-->
+<div class="video">
 <video class="myvideo" id="myvideo" src="Anton Powers & Pixie Lott - Baby (Official Music Video).mp4" poster="baby.png" autoplay>
 </video>
 </div>
+<!--end of video-->
+</div>
+<!--end of video container-->
 <div class="controlsdiv">
 <div class="progress">
 <div class="progress-bar">
 </div>
+<!--end of progress-->
 <ul class="controls">
 <li class="controllist"><i class="fa fa-play" style="cursor:pointer;" title="play" onclick="playPause();"></i></li>
 <li class="controllist"><i class="fa fa-volume-up" style="cursor:pointer;" title="mute"></i></li>
@@ -32,6 +40,8 @@
 </ul>
 </div>
 </div>
+<!--end of controlsdiv-->
 </div>
+<!--end of player-->
 </body>
 </html>
