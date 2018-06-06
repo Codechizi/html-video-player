@@ -7,13 +7,30 @@
 <meta name="description" content="a html video player">
 <link rel="icon" type="icon/x-image" href="mplayerlogo.png">
 <link rel="stylesheet" type="text/css" href="mplayer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="mplayer.js"></script>
 </head>
 <body>
-<div class="player" id="player">
-<div class="videocontainer" id="videocontainer">
+<div class="player">
+<div class="videocontainer">
+<video class="myvideo" id="myvideo" src="Anton Powers & Pixie Lott - Baby (Official Music Video).mp4" poster="baby.png" autoplay>
+</video>
 </div>
-<div class="playlist" id="playlist">
+<div class="controlsdiv">
+<div class="progress">
+<div class="progress-bar">
+</div>
+<ul class="controls">
+<li class="controllist"><i class="fa fa-play" style="cursor:pointer;" title="play" onclick="playPause();"></i></li>
+<li class="controllist"><i class="fa fa-volume-up" style="cursor:pointer;" title="mute"></i></li>
+<li class="controllist"><input type="range" id="volmeter"></li>
+<li class="controllist" style="float:right;"><i class="fa fa-gear" style="cursor:pointer;" title="settings"></i></li>
+<li class="controllist" style="float:right;"><i class="fa fa-expand" style="cursor:pointer;" title="full screen"></i></li>
+<li class="controllist" style="float:right;"><i class="	fa fa-music" style="cursor:pointer;" title="playlist"></i></li>
+<li class="controllist" style="float:right;"><i class="fa fa-random" style="cursor:pointer;" title="shuffle"></i></li>
+<li class="controllist" style="float:right;"><i class="fa fa-refresh" style="cursor:pointer;" title="repeat"></i></li>
+</ul>
+</div>
 </div>
 </div>
 </body>
