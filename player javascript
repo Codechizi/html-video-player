@@ -3,7 +3,15 @@
 //this function toggles between play and pause
 function playPause()
 {
-
+	var vid = document.getElementById("myvideo");
+	if(vid.paused == true)
+	{
+		vid.play();
+	}
+	else 
+	{
+		vid.pause();
+	}
 }
 //this function opens or closes the playlist
 function playlist()
@@ -16,6 +24,17 @@ function fullScreen()
 //this function toggles between opening or closing settings
 function settings()
 {
+	var settings = document.getElementById("settings");
+	if(settings.style.width != "700px")
+	{
+		settings.style.width = "700px";
+		settings.style.height = "360px";
+	}
+	else
+	{
+		settings.style.width = "0px";
+		settings.style.height = "0px";
+	}
 }
 //this function enables or disables shuffle mode
 function shuffle()
@@ -28,4 +47,12 @@ function repeat()
 //this function toggles between muting and unmuting
 function mute()
 {
+}
+//this function updates the progress bar
+function updateProgress()
+{
+	var vid = document.getElementById("myvideo");
+	var progressbar = document.getElementById("progressbar");
+	progressbar.style.width = (vid.currentTime/vid.duration*100)+"%";
+	setTimeout(updateProgress,1000);
 }
