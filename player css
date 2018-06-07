@@ -11,3 +11,5 @@ ul.controls{list-style-type:none;margin:0px;border:1px solid black;padding:0px;}
 li.controllist{float:left;margin:5px;}
 #volmeter{-webkit-appearance:none;width:100px;background:silver;height:10px;border-radius:2px;cursor:pointer;}
 #volmeter::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:#80d4ff;}
+#currenttime{font-weight:bold;font-style:italic;}
+#endtime{font-weight:bold;font-style:italic;}
