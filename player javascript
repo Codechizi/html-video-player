@@ -1,16 +1,25 @@
-//author codechizi
+//author victor githambo aka codechizi
 
 //this function toggles between play and pause
 function playPause()
 {
 	var vid = document.getElementById("myvideo");
+	var playpause = document.getElementById("playpause");
 	if(vid.paused == true)
 	{
 		vid.play();
+		//changing the icon and title
+		playpause.title = "pause";
+		playpause.className = "fa fa-pause";
+		//calling the updateProgress function
+		updateProgress();
 	}
 	else 
 	{
 		vid.pause();
+		//changing the icon and title
+		playpause.title = "pause";
+		playpause.className = "fa fa-play";
 	}
 }
 //this function opens or closes the playlist
