@@ -90,7 +90,25 @@ function volume()
 {
 	var vol = document.getElementById("volmeter").value;
 	var vid = document.getElementById("myvideo");
+	var mutebttn = document.getElementById("mutebttn");
 	vid.volume = vol/100;
+	//checking the volume level so as to change the volume icon appropriately
+	if(vol == 0)
+	{
+		mutebttn.className = "fa fa-volume-off";
+	}
+	else if ((vol >0) &&(vol <=25))
+	{
+		mutebttn.className = "fa fa-volume-down";
+	}
+	else if ((vol>25) && (vol<=50))
+	{
+		mutebttn.className = "fa fa-volume-down";
+	}
+	else if ((vol>50) && (vol<=100))
+	{
+		mutebttn.className = "fa fa-volume-up";
+	}
 }
 //this function sets the duration and updates the current time
 function loadTime()
