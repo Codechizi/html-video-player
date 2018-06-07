@@ -14,6 +14,7 @@
 <div class="player">
 <div class="videocontainer">
 <div class="settings" id="settings">
+<p class="titlebar" id="titlebar"></p>
 </div>
 <!--end of settings-->
 <div class="video">
