@@ -8,7 +8,6 @@ function playPause()
 	var vidtitle = document.getElementById("vidtitle");
 	var titlebar = document.getElementById("titlebar");
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 	if(vid.paused == true)
 	{
 		vid.play();
@@ -39,13 +38,11 @@ function fullScreen()
 {
 	var titlebar = document.getElementById("titlebar");
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 }
 //this function toggles between opening or closing settings
 function settings()
 {
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 	var titlebar = document.getElementById("titlebar");
 	if(settings.style.width != "700px")
 	{
@@ -65,7 +62,6 @@ function shuffle()
 {
 	var titlebar = document.getElementById("titlebar");
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 }
 //this function enables or disables repeat mode
 function repeat()
@@ -74,18 +70,41 @@ function repeat()
 	var repeat = document.getElementById("repeat");
 	var titlebar = document.getElementById("titlebar");
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 	if(vid.loop == true)
 	{
 		vid.loop = false;//exits out of the loop
 		//returning font weight back to normal to indicate that repeat is off
 		repeat.style.fontWeight = "normal";
+	   //changing the titlebar to "repeat : off"
+		if(settings.style.height != "20px")
+		{
+			settings.style.height = "20px";
+			titlebar.innerHTML = "repeat : off";
+			setTimeout(closeTitle,5000);
+		}
+		else if (settings.style.height == "20px")
+		{
+			titlebar.innerHTML = "repeat : off";
+			setTimeout(closeTitle,5000);
+		}
 	}
 	else
 	{
 		vid.loop = true;//loops the video
 		//bolding the icon so as to indicate that repeat is on
 		repeat.style.fontWeight = "bold";
+				//changing the titlebar to "repeat : on"
+		if(settings.style.height != "20px")
+		{
+			settings.style.height = "20px";
+			titlebar.innerHTML = "repeat : on";
+			setTimeout(closeTitle,5000);
+		}
+				else if (settings.style.height == "20px")
+		{
+			titlebar.innerHTML = "repeat : on";
+			setTimeout(closeTitle,5000);
+		}
 	}
 }
 //this function toggles between muting and unmuting
@@ -95,12 +114,18 @@ function mute()
 	var mutebttn = document.getElementById("mutebttn");
 	var titlebar = document.getElementById("titlebar");
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 	if(vid.muted == true)
 	{
 		vid.muted = false;//unmutes the audio
 		//changing the icon and title
 		mutebttn.title = "mute : off";
+		//changing the titlebar to "mute : off"
+		if(settings.style.height != "20px")
+		{
+			settings.style.height = "20px";
+			titlebar.innerHTML = "mute : off";
+			setTimeout(closeTitle,5000);
+		}
 		//checking the present volume so as to indicate the correct volume icon
 		if(vid.volume.volume*100 == 0)
 		{
@@ -123,6 +148,18 @@ function mute()
 	{
 		vid.muted = true;//mutes the audio
 		mutebttn.title = "mute : on";
+				//changing the titlebar to "mute : on"
+		if(settings.style.height != "20px")
+		{
+			settings.style.height = "20px";
+			titlebar.innerHTML = "mute : on";
+			setTimeout(closeTitle,5000);
+		}
+		else if (settings.style.height == "20px")
+		{
+			titlebar.innerHTML = "mute : on";
+			setTimeout(closeTitle,5000);
+		}
 		mutebttn.className = "fa fa-volume-off";
 	}
 }
@@ -142,8 +179,19 @@ function volume()
 	var mutebttn = document.getElementById("mutebttn");
 	var titlebar = document.getElementById("titlebar");
 	var settings = document.getElementById("settings");
-	var settingscontainer = document.getElementById("settingscontainer");
 	vid.volume = vol/100;
+	//changing titlebar to the volume level
+	if(settings.style.height != "20px")
+	{
+		settings.style.height = "20px";
+		titlebar.innerHTML = "volume : "+vol+"%";
+		setTimeout(closeTitle,5000);
+	}
+	else if (settings.style.height == "20px")
+	{
+		titlebar.innerHTML = "volume : "+vol+"%";
+		setTimeout(closeTitle,5000);
+	}
 	//checking the volume level so as to change the volume icon appropriately
 	if(vol == 0)
 	{
@@ -174,4 +222,10 @@ function loadTime()
 	currenttime.innerHTML = (vid.currentTime/60).toFixed(2);
 	//updates the current time after 1s
 	setTimeout(loadTime,1000);
+}
+//this function closes the titlebar
+function closeTitle()
+{
+	var settings = document.getElementById("settings");
+	settings.style.width = "0px";
 }
