@@ -1,10 +1,12 @@
 body{margin:0px;}
 .player{width:700px;height:400px;border:none;margin:10px;background:#000000;padding:0px;}
 .videocontainer{margin:0px;padding:0px;width:100%;height:90%;background:#000000;}
+.video{margin:0px;padding:0px;width:100%;height:100%;background:#000000;float:left;}
+.settings{float:left;width:0px;height:0px;background:#000000;position:fixed;opacity:0.6;transition:2s;}
 video{width:100%;height:100%;margin:0px;}
 .controlsdiv{width:700px;height:10%;background:#ffffff;border:1px solid grey;padding:0px;}
 .progress{width:100%;height:10px;background:grey;padding:0px;}
-.progress-bar{width:20%;height:100%;margin:0px;background:#ff3399;}
+.progress-bar{width:0%;height:100%;margin:0px;background:#ff3399;}
 ul.controls{list-style-type:none;margin:0px;border:1px solid black;padding:0px;}
 li.controllist{float:left;margin:5px;}
 #volmeter{-webkit-appearance:none;width:100px;background:silver;height:10px;border-radius:2px;cursor:pointer;}
