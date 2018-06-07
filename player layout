@@ -36,8 +36,8 @@
 <li class="controllist" style="float:right;"><i class="fa fa-gear" style="cursor:pointer;" title="settings" onclick="settings();"></i></li>
 <li class="controllist" style="float:right;"><i class="fa fa-expand" style="cursor:pointer;" title="full screen" onclick="fullScreen();"></i></li>
 <li class="controllist" style="float:right;"><i class="	fa fa-music" style="cursor:pointer;" title="playlist" onclick="playlist();"></i></li>
-<li class="controllist" style="float:right;"><i class="fa fa-random" style="cursor:pointer;" title="shuffle" onclick="shuffle();"></i></li>
-<li class="controllist" style="float:right;"><i class="fa fa-refresh" style="cursor:pointer;" title="repeat" onclick="playlist();"></i></li>
+<li class="controllist" style="float:right;"><i class="fa fa-random" style="cursor:pointer;" title="shuffle" onclick="shuffle();" id="shuffle"></i></li>
+<li class="controllist" style="float:right;"><i class="fa fa-refresh" style="cursor:pointer;" title="repeat" onclick="repeat();" id="repeat"></i></li>
 </ul>
 </div>
 </div>
