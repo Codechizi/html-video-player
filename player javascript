@@ -80,3 +80,10 @@ function updateProgress()
 	progressbar.style.width = (vid.currentTime/vid.duration*100)+"%";
 	setTimeout(updateProgress,1000);
 }
+//this function changes the volume-off
+function volume()
+{
+	var vol = document.getElementById("volmeter").value;
+	var vid = document.getElementById("myvideo");
+	vid.volume = vol/100;
+}
