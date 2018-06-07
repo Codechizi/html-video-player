@@ -39,8 +39,11 @@ function fullScreen()
 function settings()
 {
 	var settings = document.getElementById("settings");
+	var titlebar = document.getElementById("titlebar");
 	if(settings.style.width != "700px")
 	{
+		//indicating the title "settings"
+		titlebar.innerHTML = "Settings";
 		settings.style.width = "700px";
 		settings.style.height = "360px";
 	}
