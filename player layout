@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>mplayer</title>
+<title id="vidtitle">mplayer</title>
 <meta charset="utf-8">
 <meta name="author" content="codechizi">
 <meta name="description" content="a html video player">
