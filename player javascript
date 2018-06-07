@@ -6,6 +6,9 @@ function playPause()
 	var vid = document.getElementById("myvideo");
 	var playpause = document.getElementById("playpause");
 	var vidtitle = document.getElementById("vidtitle");
+	var titlebar = document.getElementById("titlebar");
+	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 	if(vid.paused == true)
 	{
 		vid.play();
@@ -34,11 +37,15 @@ function playlist()
 //this function toggles between normal and full screen
 function fullScreen()
 {
+	var titlebar = document.getElementById("titlebar");
+	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 }
 //this function toggles between opening or closing settings
 function settings()
 {
 	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 	var titlebar = document.getElementById("titlebar");
 	if(settings.style.width != "700px")
 	{
@@ -56,12 +63,18 @@ function settings()
 //this function enables or disables shuffle mode
 function shuffle()
 {
+	var titlebar = document.getElementById("titlebar");
+	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 }
 //this function enables or disables repeat mode
 function repeat()
 {
 	var vid = document.getElementById("myvideo");
 	var repeat = document.getElementById("repeat");
+	var titlebar = document.getElementById("titlebar");
+	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 	if(vid.loop == true)
 	{
 		vid.loop = false;//exits out of the loop
@@ -80,6 +93,9 @@ function mute()
 {
 	var vid = document.getElementById("myvideo");
 	var mutebttn = document.getElementById("mutebttn");
+	var titlebar = document.getElementById("titlebar");
+	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 	if(vid.muted == true)
 	{
 		vid.muted = false;//unmutes the audio
@@ -124,6 +140,9 @@ function volume()
 	var vol = document.getElementById("volmeter").value;
 	var vid = document.getElementById("myvideo");
 	var mutebttn = document.getElementById("mutebttn");
+	var titlebar = document.getElementById("titlebar");
+	var settings = document.getElementById("settings");
+	var settingscontainer = document.getElementById("settingscontainer");
 	vid.volume = vol/100;
 	//checking the volume level so as to change the volume icon appropriately
 	if(vol == 0)
