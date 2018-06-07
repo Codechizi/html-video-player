@@ -57,6 +57,20 @@ function shuffle()
 //this function enables or disables repeat mode
 function repeat()
 {
+	var vid = document.getElementById("myvideo");
+	var repeat = document.getElementById("repeat");
+	if(vid.loop == true)
+	{
+		vid.loop = false;//exits out of the loop
+		//returning font weight back to normal to indicate that repeat is off
+		repeat.style.fontWeight = "normal";
+	}
+	else
+	{
+		vid.loop = true;//loops the video
+		//bolding the icon so as to indicate that repeat is on
+		repeat.style.fontWeight = "bold";
+	}
 }
 //this function toggles between muting and unmuting
 function mute()
