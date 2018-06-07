@@ -56,6 +56,21 @@ function repeat()
 //this function toggles between muting and unmuting
 function mute()
 {
+	var vid = document.getElementById("myvideo");
+	var mutebttn = document.getElementById("mutebttn");
+	if(vid.muted == true)
+	{
+		vid.muted = false;//unmutes the audio
+		//changing the icon and title
+		mutebttn.title = "mute : off";
+		mutebttn.className = "fa fa-volume-up";
+	}
+	else
+	{
+		vid.muted = true;//mutes the audio
+		mutebttn.title = "mute : on";
+		mutebttn.className = "fa fa-volume-off";
+	}
 }
 //this function updates the progress bar
 function updateProgress()
