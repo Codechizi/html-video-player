@@ -82,7 +82,23 @@ function mute()
 		vid.muted = false;//unmutes the audio
 		//changing the icon and title
 		mutebttn.title = "mute : off";
-		mutebttn.className = "fa fa-volume-up";
+		//checking the present volume so as to indicate the correct volume icon
+		if(vid.volume.volume*100 == 0)
+		{
+			mutebttn.className = "fa fa-volume-off";
+		}
+		else if (((vid.volume*100) > 0) && ((vid.volume*100) <= 25))
+		{
+			mutebttn.className = "fa fa-volume-down";
+		}
+		else if (((vid.volume*100) > 25) && ((vid.volume*100)<=50))
+		{
+			mutebttn.className = "fa fa-volume-down";
+		}
+		else if (((vid.volume*100) > 50) && ((vid.volume*100) <=100))
+		{
+			mutebttn.className = "fa fa-volume-up";
+		}
 	}
 	else
 	{
