@@ -15,7 +15,7 @@
 <div class="videocontainer">
 <div class="settings" id="settings">
 <p class="titlebar" id="titlebar"></p>
-<div class="settings-container">
+<div class="settings-container" id="settingscontainer">
 <ul class="settinglist">
 <li class="settingitem">open</li>
 <li class="settingitem">playback</li>
