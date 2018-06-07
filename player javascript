@@ -5,6 +5,7 @@ function playPause()
 {
 	var vid = document.getElementById("myvideo");
 	var playpause = document.getElementById("playpause");
+	var vidtitle = document.getElementById("vidtitle");
 	if(vid.paused == true)
 	{
 		vid.play();
@@ -15,6 +16,8 @@ function playPause()
 		loadTime();
 		//calling the updateProgress function
 		updateProgress();
+		//setting the title of the current video on the title bar
+		vidtitle.innerHTML = vid.src;
 	}
 	else 
 	{
