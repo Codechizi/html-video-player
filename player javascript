@@ -11,6 +11,8 @@ function playPause()
 		//changing the icon and title
 		playpause.title = "pause";
 		playpause.className = "fa fa-pause";
+		//calling the loadVideo function->it basically sets duration and updates the currentTime
+		loadTime();
 		//calling the updateProgress function
 		updateProgress();
 	}
@@ -86,4 +88,17 @@ function volume()
 	var vol = document.getElementById("volmeter").value;
 	var vid = document.getElementById("myvideo");
 	vid.volume = vol/100;
+}
+//this function sets the duration and updates the current time
+function loadTime()
+{
+	var vid = document.getElementById("myvideo");
+	var currenttime = document.getElementById("currenttime");
+	var endtime = document.getElementById("endtime");
+	//setting the duration of the current video
+	endtime.innerHTML = (vid.duration/60).toFixed(2);
+	//updating the currentTime of the currentvideo
+	currenttime.innerHTML = (vid.currentTime/60).toFixed(2);
+	//updates the current time after 1s
+	setTimeout(loadTime,1000);
 }
